@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:kitter.helloWorld"
+		"onCommand:kitter.greetings"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "kitter.helloWorld",
-				"title": "Hello World"
+				"command": "kitter.greetings",
+				"title": "Greetings"
 			}
 		]
 	},
