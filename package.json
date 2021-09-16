@@ -1,7 +1,8 @@
 {
 	"name": "kitter",
 	"displayName": "kitter",
-	"description": "",
+	"description": "YAML Language Support with built-in kitt syntax support",
+	"author": "Johee Chung <johchung@microsoft.com>",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -10,7 +11,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:kitter.greetings"
+		"onCommand:kitter.greetings",
+		"onLanguage:yaml"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -19,7 +21,19 @@
 				"command": "kitter.greetings",
 				"title": "Greetings"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "YAML Server",
+			"properties": {
+				"languageServerExample.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

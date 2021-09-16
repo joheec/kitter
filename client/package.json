@@ -1,0 +1,14 @@
+{
+  "name": "kitter-client",
+  "version": "1.0.0",
+  "description": "VSCode part of YAML server",
+  "author": "Johee Chung <johchung@microsoft.com>",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "vscode-languageclient": "^7.0.0"
+  }
+}
